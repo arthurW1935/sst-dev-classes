@@ -1,0 +1,7 @@
+main{
+    height: 50vh;
+    display: flex;
+    padding: 0 5rem;
+    flex-direction: column;
+    justify-content: center;
+}

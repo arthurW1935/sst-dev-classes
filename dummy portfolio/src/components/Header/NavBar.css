@@ -1,0 +1,35 @@
+.navbar{
+    flex: 1;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-item{
+    list-style: none;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item a:hover{
+    color: black;
+}
+
+.nav-item a::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color: black;
+    transition: 0.3s width ease;
+}
+
+.nav-item a:hover::after{
+    width: 100%;
+    transition: width 0.3s;
+}

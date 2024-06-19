@@ -1,0 +1,10 @@
+header{
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1{
+    flex: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

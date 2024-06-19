@@ -1,0 +1,34 @@
+.tile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #bda0a0;
+    border-radius: 10px;
+}
+
+.tile-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.tile-content h2{
+    font-size: 1.5rem;
+    margin: 5px 0 2px 0;
+}
+
+.tile-content h3{
+    font-size: 1.1rem;
+    margin: 2px 0;
+}
+
+.tile-content p{
+    font-size: 1rem;
+    margin: 2px 0;
+}
