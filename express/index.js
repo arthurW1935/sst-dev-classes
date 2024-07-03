@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+
+app.use(logger);
 app.use(express.json());
 
 let courses = [
@@ -39,5 +41,16 @@ app.delete('/courses/:id', (req, res) => {
     res.json(course);
 });
 
+
+function logger(req, res, next) {
+    const method = req.method;
+    const ip = req.ip;
+    const hostname = req.hostname;
+    const date = new Date().toISOString();
+
+    console.log(`METHOD:${method}    IP:${ip}    HOST:${hostname}    DATE:${date}`);
+
+    next();
+}
 
 app.listen(3000, () => console.log('Listening on port 3000...'));
