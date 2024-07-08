@@ -1,13 +1,17 @@
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect("mongodb+srv://sourashis23bcs10038:Op5t7P3O2oq4oeG7@cluster0.vcsl5lx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-.then(() => {
-    console.log("Connected to MongoDB");
-})
-.catch((err) => {
-    console.log("MongoDB connection failed due to an error: ", err);
-});
+
+const mongoURI = process.env.MONGO_URI;
+mongoose
+    .connect(mongoURI)
+    .then(() => {
+        console.log("Connected to MongoDB");
+    })
+    .catch((err) => {
+        console.log("MongoDB connection failed due to an error: ", err);
+    });
 
 
 const productSchema = new mongoose.Schema({
