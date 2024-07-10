@@ -2,7 +2,7 @@ const UserModel = require('../models/user');
 
 exports.createUser = async (req, res) => {
     await UserModel.create({
-        name: req.body.username,
+        username: req.body.username,
         email: req.body.email,
         password: req.body.password,
     });
